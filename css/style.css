@@ -1,0 +1,327 @@
+/* Box Model Hack */
+* {
+  box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+html {
+  font-size: 62.5%;
+  font-family: sans-serif;
+}
+
+body {
+  color: white;
+}
+
+h1 {
+  font-size: 7rem;
+  font-family: 'Hubballi', sans-serif;
+}
+
+h2 {
+  font-size: 5rem;
+  font-family: 'Barlow', sans-serif;
+}
+
+h3 {
+  font-size: 3rem;
+  font-family: 'Barlow', sans-serif;
+}
+
+p {
+  font-size: 1.6rem;
+  font-weight: 300;
+}
+
+.shadow {
+  box-shadow: 5px 5px 5px 5px rgba(21, 21, 21, 0.5);
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+
+.hidden {
+  display: none;
+}
+
+/* ----- Main ----- */
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100vh;
+}
+
+.logo {
+  margin-bottom: 5%;
+}
+
+.foldText {
+  flex-basis: 35%;
+  margin-top: 5%;
+}
+
+.foldText p {
+  padding-top: 15%;
+  width: 70%;
+  margin: 0 auto;
+}
+
+/* ----- Carousel ----- */
+
+/* .hidden {
+  display: none;
+}
+
+.carousel {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+.carPhoto img {
+  max-width: 50%;
+}
+
+.backwards,
+.forwards {
+  position: absolute;
+  top: 48%;
+  width: auto;
+  margin-top: -2%;
+  padding: 1%;
+  font-weight: bold;
+  font-size: 1.9rem;
+  transition: 0.5s ease;
+  border-radius: 0 5px 5px 0;
+  user-select: none;
+}
+
+.forwards {
+  right: 0;
+  border-radius: 0 4px 4px 0;
+} */
+
+.carousel {
+  display: flex;
+  justify-content: flex-start unsafe;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.carPhoto {
+  flex-basis: 20%;
+  flex-shrink: 0;
+  flex-grow: 0;
+  max-width: 20%;
+}
+
+/* ----- Columns ----- */
+
+.columns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imgCol{
+  flex-basis: 50%;
+  padding: 2.5%;
+}
+
+.imgCol img {
+  width: 100%;
+}
+
+.col-2-3 {
+  flex-basis: 66%;
+  margin: 5%;
+  padding: 2.5% 5%;
+}
+
+.col-2-3 h2 {
+  margin-bottom: 10%;
+}
+
+.col-2-3 p {
+  margin-bottom: 5%
+}
+
+/* ----- Contact ----- */
+
+.contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5%;
+  padding: 30px;
+}
+
+.phone {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+/* ----- Menu ----- */
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5%;
+}
+
+.menu h2{
+  padding-bottom: 30px;
+  margin-bottom: 40px;
+  width: 50%;
+  text-align: center;
+}
+
+.drinks {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  width: 75%;
+  margin: auto;
+}
+
+.desc {
+  flex-basis: 30%;
+  flex-shrink: 0;
+  text-align: center;
+}
+
+.desc h3 {
+  margin-bottom: 10px;
+}
+
+.desc p {
+  margin-bottom: 10px;
+}
+
+/******************************************
+/* SPECIFIC STYLES
+/*******************************************/
+
+/* ----- Main ----- */
+
+main {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, .5), rgba(255, 255, 255, 0)), rgb(72, 70, 63);
+  /* background-attachment: fixed;
+  background-size: cover;
+  background-position: 0 0px; */
+  text-align: center;
+}
+
+main span {
+  font-family: 'Tangerine', cursive;
+  font-size: 5rem;
+}
+
+main p {
+  font-family: 'Barlow', sans-serif;
+  font-size: 2rem;
+}
+
+/* .logo {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(12, 12, 12, 0.1));
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  padding: 30px 60px;
+} */
+
+/* ----- Carousel ----- */
+
+.carousel {
+  border-top: 15px solid rgb(189, 96, 82);
+  /* border-bottom: 10px solid rgb(189, 96, 82); */
+}
+
+.backwards,
+.forwards {
+  color: white;
+  text-decoration: none;
+}
+
+/* ----- Columns ----- */
+
+.columns {
+  background-color: rgb(72, 70, 63);
+}
+
+.firstCol {
+  border-top: 15px solid rgb(189, 96, 82);
+}
+
+.col-2-3 {
+  background: rgba(109, 72, 65, 0.6);
+  border-radius: 10px;
+}
+
+.imgCol img {
+  border-radius: 10px;
+}
+
+.altCol{
+  background: rgb(189, 96, 82);
+}
+
+/* ----- Contact ----- */
+
+.contact {
+  background: rgb(189, 96, 82);
+}
+
+.contact span {
+  font-size: 1.8rem;
+  font-weight: 600;
+  font-family: 'Barlow', sans-serif;
+}
+
+/* ----- Menu ----- */
+
+.menu h2 {
+  border-bottom: 1px solid white;
+}
+
+/******************************************
+/* RESPONSIVE
+/*******************************************/
+
+@media screen and (max-width: 1000px) {
+  .carPhoto {
+    flex-basis: 33.3333%;
+    max-width: 33.3333%;
+  }
+}
+
+@media screen and (max-width: 713px) {
+  .carPhoto {
+    flex-basis: 50%;
+    max-width: 50%;
+  }
+}
