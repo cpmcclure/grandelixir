@@ -143,9 +143,6 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.firstCol {
   padding: 50px;
 }
 
@@ -189,6 +186,12 @@ main {
 }
 
 /* ----- Menu ----- */
+
+.columns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 .menu {
   display: flex;
@@ -307,6 +310,11 @@ main p {
 }
 
 /* ----- Menu ----- */
+
+.container {
+  background-color: rgb(72, 70, 63);
+}
+
 
 .menu h2 {
   border-bottom: 1px solid white;
