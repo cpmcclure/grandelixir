@@ -135,6 +135,7 @@ main {
   flex-shrink: 0;
   flex-grow: 0;
   max-width: 20%;
+  max-height: 30%
 }
 
 /* ----- Columns ----- */
@@ -202,7 +203,7 @@ main {
 
 .menu h2{
   padding-bottom: 30px;
-  margin-bottom: 40px;
+  margin-bottom: 70px;
   width: 50%;
   text-align: center;
 }
@@ -212,7 +213,7 @@ main {
   flex-wrap: wrap;
   justify-content: center;
   gap: 30px;
-  width: 75%;
+  width: 90%;
   margin: auto;
 }
 
@@ -223,11 +224,18 @@ main {
 }
 
 .desc h3 {
-  margin-bottom: 10px;
+  width: 70%;
+  padding-bottom: 20px;
+  margin: 0 auto 20px auto;
 }
 
 .desc p {
-  margin-bottom: 10px;
+  margin: 0 auto 20px auto;
+  width: 80%;
+}
+
+.desc span {
+  font-size: 1.6rem;
 }
 
 /******************************************
@@ -237,7 +245,7 @@ main {
 /* ----- Main ----- */
 
 main {
-  background: linear-gradient(to bottom, rgba(0, 0, 0, .5), rgba(255, 255, 255, 0)), rgb(72, 70, 63);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, .45), rgba(255, 255, 255, 0)), rgb(72, 70, 63);
   /* background-attachment: fixed;
   background-size: cover;
   background-position: 0 0px; */
@@ -277,7 +285,7 @@ main p {
 /* ----- Columns ----- */
 
 .columns {
-  background-color: rgb(72, 70, 63);
+  background: linear-gradient(to right, rgba(0, 0, 0, .5), rgba(255, 255, 255, 0)), rgb(72, 70, 63);
 }
 
 .firstCol {
@@ -312,22 +320,64 @@ main p {
 /* ----- Menu ----- */
 
 .container {
-  background-color: rgb(72, 70, 63);
+  background: linear-gradient(to top, rgba(0, 0, 0, .5), rgba(255, 255, 255, 0)), rgb(72, 70, 63);
 }
 
-
 .menu h2 {
-  border-bottom: 1px solid white;
+  border-bottom: 2px solid white;
+}
+
+.desc h3 {
+  border-bottom: 1px dotted white;
 }
 
 /******************************************
 /* RESPONSIVE
 /*******************************************/
 
+@media screen and (max-width: 1150px) {
+  .foldText {
+    flex-basis: 40%;
+    margin-top: 10%;
+  }
+}
+
 @media screen and (max-width: 1000px) {
   .carPhoto {
     flex-basis: 33.3333%;
     max-width: 33.3333%;
+  }
+  .foldText {
+    flex-basis: 40%;
+    margin-top: 2.5%;
+  }
+  .columns {
+    flex-direction: column;
+  }
+  .altCol {
+    flex-direction: column-reverse;
+  }
+  .imgCol{
+    width: 70%;
+  }
+  .col-2-3{
+    text-align: center;
+  }
+  .desc {
+    flex-basis: 40%;
+  }
+}
+
+@media screen and (max-width: 940px) {
+.foldText {
+  flex-basis: 45%;
+  margin-top: 5%;
+}
+}
+
+@media screen and (max-width: 800px) {
+  .foldText {
+    margin-top: 10%;
   }
 }
 
@@ -335,5 +385,25 @@ main p {
   .carPhoto {
     flex-basis: 50%;
     max-width: 50%;
+  }
+  .foldText {
+    margin-top: 5%;
+  }
+  .desc {
+    flex-basis: 80%;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .foldText {
+    margin-top: 10%;
+    flex-basis: 60%;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .foldText {
+    flex-basis: 70%;
+    margin-top: 15%;
   }
 }
