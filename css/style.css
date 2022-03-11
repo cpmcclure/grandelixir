@@ -36,8 +36,8 @@ h1 {
 }
 
 h2 {
-  font-size: 5rem;
-  font-family: 'Barlow', sans-serif;
+  font-size: 7rem;
+  font-family: 'Tangerine', sans-serif;
 }
 
 h3 {
@@ -51,7 +51,7 @@ p {
 }
 
 .shadow {
-  box-shadow: 5px 5px 5px 5px rgba(21, 21, 21, 0.5);
+  box-shadow: 2.5px 2.5px 5px 5px rgba(21, 21, 21, 0.15);
 }
 
 /******************************************
@@ -121,21 +121,129 @@ main {
   border-radius: 0 4px 4px 0;
 } */
 
-.carousel {
+/*.carousel {
   display: flex;
   justify-content: flex-start unsafe;
   position: absolute;
   bottom: 0;
   left: 0;
   overflow: hidden;
-}
+}*/
 
 .carPhoto {
-  flex-basis: 20%;
+  /* flex-basis: 20vh; */
   flex-shrink: 0;
   flex-grow: 0;
-  max-width: 20%;
-  max-height: 30%
+  /* max-width: 50vh; */
+  /* max-height: 30% */
+}
+
+/* ----- Carousel Function ----- */
+
+.allSlides {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: row unsafe;
+  width: 100vw;
+  overflow: hidden;
+  /* margin: 0 auto; */
+  /* perspective: 500px; */
+  height: 375.25px;
+}
+
+.singleSlide {
+  /* display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center; */
+  width: 270px;
+  flex-shrink: 0;
+  position: absolute;
+  /* background-color: white; */
+  transition: 6s linear;
+  /* box-shadow: 0px 5px 10px lightgrey; */
+}
+
+/* Left slide*/
+.singleSlide[data-order="1"] {
+  left: -370px;
+  transform: translate(-50%);
+  z-index: 0;
+  opacity: 0;
+}
+
+/* Middle slide */
+.singleSlide[data-order="2"] {
+  left: -100px;
+  transform: translate(-50%);
+  z-index: 3;
+  opacity: 1;
+}
+
+/* Right slide*/
+.singleSlide[data-order="3"] {
+  left: 170px;
+  transform: translate(-50%);
+  z-index: 2;
+  opacity: 1;
+}
+
+/* Fourth Slide */
+.singleSlide[data-order="4"] {
+  left: 440px;
+  transform: translate(-50%);
+  z-index: 2;
+  opacity: 1;
+}
+
+/* Fifth Slide */
+.singleSlide[data-order="5"] {
+  left: 710px;
+  transform: translate(-50%);
+  z-index: 2;
+  opacity: 1;
+}
+
+/* Sixth Slide */
+.singleSlide[data-order="6"] {
+  left: 980px;
+  transform: translate(-50%);
+  z-index: 2;
+  opacity: 1;
+}
+
+/* Seventh Slide */
+.singleSlide[data-order="7"] {
+  left: 1250px;
+  transform: translate(-50%);
+  z-index: 2;
+  opacity: 1;
+}
+
+/* Eigth Slide */
+.singleSlide[data-order="8"] {
+  left: 1520px;
+  transform: translate(-50%);
+  z-index: 2;
+  opacity: 1;
+}
+
+/* Ninth Slide */
+.singleSlide[data-order="9"] {
+  left: 1790px;
+  transform: translate(-50%);
+  z-index: 2;
+  opacity: 1;
+}
+
+/* Tenth Slide */
+.singleSlide[data-order="10"] {
+  left: 2060px;
+  transform: translate(-50%);
+  z-index: 0;
+  opacity: 0;
 }
 
 /* ----- Columns ----- */
@@ -163,7 +271,7 @@ main {
 }
 
 .col-2-3 h2 {
-  margin-bottom: 10%;
+  margin-bottom: 5%;
 }
 
 .col-2-3 p {
@@ -204,7 +312,7 @@ main {
 .menu h2{
   padding-bottom: 30px;
   margin-bottom: 70px;
-  width: 50%;
+  width: 30%;
   text-align: center;
 }
 
@@ -335,21 +443,24 @@ main p {
 /* RESPONSIVE
 /*******************************************/
 
+@media screen and (min-width: 1151px) {
+  .foldText {
+    flex-basis: 35%;
+    margin-top: 2.5%;
+  }
+}
+
 @media screen and (max-width: 1150px) {
   .foldText {
     flex-basis: 40%;
-    margin-top: 10%;
+    margin-top: 5%;
   }
 }
 
 @media screen and (max-width: 1000px) {
-  .carPhoto {
-    flex-basis: 33.3333%;
-    max-width: 33.3333%;
-  }
   .foldText {
     flex-basis: 40%;
-    margin-top: 2.5%;
+    margin-top: 5%;
   }
   .columns {
     flex-direction: column;
@@ -371,7 +482,7 @@ main p {
 @media screen and (max-width: 940px) {
 .foldText {
   flex-basis: 45%;
-  margin-top: 5%;
+  margin-top: 10%;
 }
 }
 
@@ -382,12 +493,8 @@ main p {
 }
 
 @media screen and (max-width: 713px) {
-  .carPhoto {
-    flex-basis: 50%;
-    max-width: 50%;
-  }
   .foldText {
-    margin-top: 5%;
+    margin-top: 10%;
   }
   .desc {
     flex-basis: 80%;
@@ -396,7 +503,7 @@ main p {
 
 @media screen and (max-width: 640px) {
   .foldText {
-    margin-top: 10%;
+    margin-top: 15%;
     flex-basis: 60%;
   }
 }
